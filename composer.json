@@ -1,0 +1,26 @@
+{
+    "name": "hounddd/wn-reviews-plugin",
+    "type": "winter-plugin",
+    "description": "Reviews and testimonials plugin for Winter CMS",
+    "homepage": "https://github.com/hounddd/wn-reviews-plugin",
+    "keywords": ["winter cms", "winter", "plugin", "reviews", "testomonials"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Damien MATHIEU",
+            "email": "damien@hounddd.fr",
+            "role": "Original Author"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/hounddd/wn-reviews-plugin/issues",
+        "source": "https://github.com/hounddd/wn-reviews-plugin"
+    },
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "reviews"
+    }
+}

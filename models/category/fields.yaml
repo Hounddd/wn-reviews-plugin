@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: 'hounddd.reviews::lang.models.general.name'
+        span: left
+    slug:
+        label: 'hounddd.reviews::lang.models.general.slug'
+        span: right
+        preset:
+            field: name
+            type: slug
+    enabled:
+        label: 'hounddd.reviews::lang.models.general.enabled'
+        type: switch
+        default: true
+    description:
+        label: 'hounddd.reviews::lang.models.category.description'
+        type: richeditor
+        searchable: false

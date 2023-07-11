@@ -1,0 +1,56 @@
+{% import 'hounddd.reviews::rating' as reviewMacros %}
+
+{% if reviews | length > 0 %}
+    {% set uuid = __SELF__.id %}
+
+    <div class="reviews--slider">
+        <div id="{{ uuid }}">
+            {% for review in reviews %}
+                <figure class="review">
+                    {% if review.avatar %}
+                        <div class="review--avatar">
+                            <img src="{{ review.avatar | resize(120) }}" alt="{{ review.avatar.title }}" class="w-full h-full   object-cover" />
+                        </div>
+                    {% endif %}
+                    <p class="review--name">{{ review.name }}</p>
+                    <p class="review--title">{{ review.title }}</p>
+                    <div class="rating">{{ reviewMacros.rating(__SELF__.ratingDisplay, review.rating) }}</div>
+                    <div>{{ html_limit(review.content | nl2br, 300) }}</div>
+                </figure>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var slider = tns({
+            container: '#{{ uuid }}',
+            rewind: true,
+            slideBy: 'page',
+
+            controlsText: ["{{ 'system::lang.pagination.previous' | trans }}", "{{ 'system::lang.pagination.next' | trans }}"],
+            controlsPosition: 'top',
+
+            {% if __SELF__.showDots %}
+            nav: true,
+            navPosition: 'bottom',
+            {% endif %}
+
+            {% if __SELF__.autoPlay > 0 %}
+                autoplayTimeout: {{ __SELF__.autoPlay * 1000 }},
+                autoplay: true,
+                autoplayButtonOutput: false,
+            {% endif %}
+        });
+    });
+    </script>
+
+    <style>
+
+
+    </style>
+
+{% else %}
+    <p>{{ __SELF__.noReviewsMessage }}</p>
+{% endif %}

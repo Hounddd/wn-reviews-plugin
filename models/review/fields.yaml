@@ -1,0 +1,59 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: 'hounddd.reviews::lang.models.general.name'
+        span: left
+        type: text
+    email:
+        label: 'hounddd.reviews::lang.models.review.email'
+        span: right
+        type: text
+tabs:
+    fields:
+        title:
+            tab: 'hounddd.reviews::lang.tabs.general'
+            label: 'hounddd.reviews::lang.models.general.title'
+            span: left
+        rating:
+            tab: 'hounddd.reviews::lang.tabs.general'
+            label: 'hounddd.reviews::lang.models.review.rating'
+            span: right
+            type: starrating
+            allowReset: true
+            maxStars: 5
+            color: orange
+            default: 0
+        content:
+            tab: 'hounddd.reviews::lang.tabs.general'
+            label: 'hounddd.reviews::lang.models.review.content'
+            span: full
+            type: textarea
+            size: huge
+        categories:
+            tab: 'hounddd.reviews::lang.tabs.categories'
+            label: Categories
+            type: relation
+            nameFrom: name
+
+secondaryTabs:
+    fields:
+        avatar:
+            label: 'hounddd.reviews::lang.models.review.avatar'
+            span: left
+            type: fileupload
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+            thumbOptions:
+                mode: crop
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto
+        approved:
+            label: 'hounddd.reviews::lang.models.review.approved'
+            span: left
+            type: switch

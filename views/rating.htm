@@ -1,0 +1,25 @@
+{% macro rating(mode, value, stars = 5) %}
+    {% if value > 0 %}
+    <span class="stars">
+        {% if mode in ['both', 'stars'] %}
+            {% for star in 1..stars %}
+                {% if star > value %}
+                    <i aria-hidden="true">&star;</i>
+                {% else %}
+                    <i aria-hidden="true">&starf;</i>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% if mode == 'both' %}
+        &nbsp;
+        {% endif %}
+        {% if mode in ['both', 'text'] %}
+            <span>{{ 'hounddd.reviews::lang.components.general.rating' | transchoice(value, {
+                'stars': stars,
+                'value': value
+            }) }}</span>
+        {% endif %}
+    </span>
+    {% endif %}
+{% endmacro %}

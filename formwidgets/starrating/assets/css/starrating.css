@@ -1,0 +1,10 @@
+/*!
+ * hounddd.reviews - 1.0.0 - 20230710-171617
+ * Hounddd.Reviews Plugin for WinterCMS
+ *
+ * Damien MATHIEU - HOUNDDD (https://www.hounddd.fr/)
+ *
+ * filebase: starrating.css - hash: 28f5a5b23989e077
+ */
+
+@charset "UTF-8";.rating{--star-color:#fdd835;container:component/inline-size;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-box-pack:end;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-direction:row-reverse;flex-direction:row-reverse;-webkit-flex-wrap:wrap;flex-wrap:wrap;gap:0;-webkit-justify-content:flex-end;justify-content:flex-end;position:relative}.rating>input[type=button]{border-width:0;cursor:pointer;font-size:28px;line-height:1;opacity:.4;padding:0}.rating>input[type=button]:hover{opacity:1}.rating>input[type=button]{background:none;color:inherit;outline:inherit}.rating>input[type=button]:dir(ltr){margin-right:10px}.rating>input[type=button]:dir(rtl){margin-left:10px}.rating>input[type=radio]{bottom:25%;opacity:0;position:absolute}.rating>input[type=radio]:checked~label:before{opacity:1}.rating>label{color:var(--star-color);cursor:pointer;font-size:38px;line-height:1;margin:0;position:relative}.rating>label:before{content:"★";opacity:0;position:absolute;-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:opacity 225ms;transition:opacity 225ms}.rating>label:hover:before,.rating>label:hover~label:before{opacity:1!important}.rating:hover>input[type=radio]:checked~label:before{opacity:.4}

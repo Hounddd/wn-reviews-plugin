@@ -1,0 +1,5 @@
+'1.0.0':
+    - 'First version of Reviews'
+    - v1.0.0/create_reviews_table.php
+    - v1.0.0/create_categories_table.php
+    - v1.0.0/seed_all_tables.php

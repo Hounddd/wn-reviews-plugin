@@ -1,0 +1,66 @@
+/*!
+ * Hounddd.Reviews - Star rating form widget
+ */
+.rating {
+	--star-color: #fdd835;
+
+	container: component / inline-size;
+    @apply relative flex justify-end flex-row-reverse flex-wrap gap-0;
+
+	& > input[type=button] {
+        @apply border-0 p-0 text-[28px] leading-none cursor-pointer opacity-40 hover:opacity-100;
+        background: none;
+        color: inherit;
+        outline: inherit;
+
+        &:dir(ltr) {
+            @apply mr-[10px];
+        }
+        &:dir(rtl) {
+            @apply ml-[10px];
+        }
+    }
+
+	& > input[type=radio] {
+        @apply absolute opacity-0 bottom-1/4;
+
+		&:checked {
+			& ~ label {
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	& > label {
+        @apply relative text-[38px] leading-none m-0 cursor-pointer;
+		color: var(--star-color);
+
+		&::before {
+			content: "\2605";
+            @apply absolute opacity-0;
+            transform-origin: 50% 50%;
+			transition: opacity 225ms;
+		}
+
+        &:hover {
+            &:before,
+            & ~ label:before {
+                opacity: 1 !important;
+            }
+        }
+	}
+
+	&:hover {
+		& > input[type=radio] {
+			&:checked {
+				& ~ label {
+					&:before {
+						opacity: 0.4;
+					}
+				}
+			}
+		}
+	}
+}

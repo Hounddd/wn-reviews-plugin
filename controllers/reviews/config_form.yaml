@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'hounddd.reviews::lang.models.review.label'
+
+# Model Form Field configuration
+form: $/hounddd/reviews/models/review/fields.yaml
+
+# Model Class name
+modelClass: Hounddd\Reviews\Models\Review
+
+# Default redirect location
+defaultRedirect: hounddd/reviews/reviews
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: hounddd/reviews/reviews/update/:id
+    redirectClose: hounddd/reviews/reviews
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: hounddd/reviews/reviews
+    redirectClose: hounddd/reviews/reviews
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

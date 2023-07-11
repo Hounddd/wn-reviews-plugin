@@ -1,0 +1,56 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: 'hounddd.reviews::lang.models.general.name'
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: 'hounddd.reviews::lang.models.review.email'
+        type: text
+        searchable: true
+        sortable: true
+    rating:
+        label: 'hounddd.reviews::lang.models.review.rating'
+        sortable: true
+        type: starrating
+    title:
+        label: 'hounddd.reviews::lang.models.general.title'
+        type: text
+        searchable: true
+        sortable: true
+    content:
+        label: 'hounddd.reviews::lang.models.review.content'
+        # type: text
+        type: partial
+        # format: str_limit(%s, 100)
+        searchable: true
+        sortable: true
+    approved:
+        label: 'hounddd.reviews::lang.models.review.approved'
+        sortable: true
+        type: switch
+    # sort_order:
+    #     label: 'hounddd.reviews::lang.models.general.sort_order'
+    #     sortable: true
+    # created_at:
+    #     label: Created At
+    #     type: datetime
+    #     searchable: true
+    #     sortable: true
+    #     format: d.m.Y H:i:s
+    created_at:
+        label: 'hounddd.reviews::lang.models.general.created_at'
+        type: datetime
+        searchable: false
+        sortable: true
+        invisible: true
+    updated_at:
+        label: 'hounddd.reviews::lang.models.general.updated_at'
+        type: datetime
+        searchable: false
+        sortable: true
+        invisible: true

@@ -1,0 +1,77 @@
+/*!
+ * Hounddd.Reviews styles for tiny slider
+ */
+
+.reviews{
+    &--slider {
+
+        .tns{
+            &-outer {
+                @apply relative;
+            }
+
+            &-inner {
+                @apply w-[calc(100%_-_6rem)] overflow-hidden;
+                margin: 0 auto !important;
+            }
+
+            &-item {
+                @apply text-center;
+
+                .review {
+                    &--avatar {
+                        @apply w-24 h-24 rounded-full border-4 border-gray-400 overflow-hidden mx-auto;
+
+                        img {
+                            @apply w-full h-full object-cover;
+                        }
+                    }
+                    &--name {
+                        @apply mb-4;
+                    }
+                    &--title {
+                        @apply text-xl font-semibold;
+                    }
+                }
+            }
+
+            // Prev/Newt buttons
+            &-controls {
+                @apply absolute w-full flex justify-between top-[50%] text-center mb-[10px] -translate-y-1/2 z-50;
+
+                & [aria-controls] {
+                    @apply relative flex h-11 w-11  items-center justify-center rounded-full bg-gray-100 shadow-md hover:text-white hover:bg-gray-600 overflow-hidden;
+                    text-indent: -9999px;
+
+                    &::before {
+                        @apply absolute inset-0 flex justify-center text-[3.5rem] leading-10;
+                        text-indent: 0;
+                    }
+                }
+
+                & [data-controls="prev"]::before {
+                    content: "\2039";
+                }
+                & [data-controls="next"]::before {
+                    content: "\203A";
+                }
+            }
+
+            // Dots
+            &-nav {
+                @apply text-center my-3;
+
+                & > [aria-controls] {
+                    @apply w-3 h-3 p-0 mx-2 rounded-full bg-gray-300 hover:bg-gray-400;
+                }
+                & > .tns-nav-active {
+                    @apply bg-gray-600;
+                }
+            }
+        }
+
+    }
+}
+
+
+
