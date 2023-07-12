@@ -29,7 +29,7 @@ class Category extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['name'];
 
     /**
      * @var array Validation rules for attributes
