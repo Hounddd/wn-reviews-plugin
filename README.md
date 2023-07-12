@@ -1,5 +1,7 @@
 # Review plugin for WinterCMS
 
+![Blocks Plugin](https://github.com/hounddd/wn-reviews-plugin/blob/main/.github/Review-plugin.png?raw=true)
+
 Show reviews, ratings or testimonials of your customers. No other plugin dependency.
 
 ## Features
