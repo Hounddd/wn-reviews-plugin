@@ -16,6 +16,8 @@ class Categories extends Controller
         \Backend\Behaviors\ListController::class,
     ];
 
+    public $requiredPermissions = ['hounddd.reviews.manage_categories'];
+
     public function __construct()
     {
         parent::__construct();

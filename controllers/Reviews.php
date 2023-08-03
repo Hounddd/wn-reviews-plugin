@@ -16,6 +16,8 @@ class Reviews extends Controller
         \Backend\Behaviors\ListController::class,
     ];
 
+    public $requiredPermissions = ['hounddd.reviews.manage_reviews'];
+
     public function __construct()
     {
         parent::__construct();
