@@ -1,0 +1,22 @@
+/*!
+ * Hounddd.Reviews styles for default reviews list
+ */
+
+.reviews {
+
+    .review {
+
+        figcaption {
+            @apply flex items-center space-x-3 font-semibold;
+        }
+        &--avatar {
+            @apply w-16 h-16 rounded-full border-4 border-gray-400 overflow-hidden;
+
+            img {
+                @apply my-0 w-full h-full object-cover;
+            }
+        }
+
+    }
+
+}

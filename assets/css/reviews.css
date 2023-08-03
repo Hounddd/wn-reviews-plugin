@@ -1,0 +1,10 @@
+/*!
+ * hounddd.reviews - 1.0.0 - 20230803-165856
+ * Hounddd.Reviews Plugin for WinterCMS
+ *
+ * Damien MATHIEU - HOUNDDD (https://www.hounddd.fr/)
+ *
+ * filebase: reviews.css - hash: 698ab86eac19b439
+ */
+
+.reviews .review figcaption{-webkit-box-align:center;-webkit-align-items:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:flex}.reviews .review figcaption>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-left:calc(.75rem*(1 - var(--tw-space-x-reverse)));margin-right:calc(.75rem*var(--tw-space-x-reverse))}.reviews .review figcaption{font-weight:600}.reviews .review--avatar{--tw-border-opacity:1;border-color:rgb(156 163 175/var(--tw-border-opacity));border-radius:9999px;border-width:4px;height:4rem;overflow:hidden;width:4rem}.reviews .review--avatar img{height:100%;margin-bottom:0;margin-top:0;object-fit:cover;width:100%}

@@ -50,6 +50,17 @@ class Reviews extends BaseReviewsComponent
         );
     }
 
+
+
+    public function onRun()
+    {
+        parent::onRun();
+
+        $this->addCss([
+            '$/hounddd/reviews/assets/css/reviews.css',
+        ]);
+    }
+
     protected function prepareVars()
     {
         $this->pageParam = $this->page['pageParam'] = $this->paramName('pageNumber');

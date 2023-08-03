@@ -31,8 +31,9 @@ mix.setPublicPath(__dirname);
 
 // Render Tailwind style
 mix
-    .sass('formwidgets/starrating/assets/scss/starrating.scss', 'formwidgets/starrating/assets/css')
+    .sass('assets/scss/reviews.scss', 'assets/css')
     .sass('assets/vendors/tinyslider/scss/styles.scss', 'assets/vendors/tinyslider/css')
+    .sass('formwidgets/starrating/assets/scss/starrating.scss', 'formwidgets/starrating/assets/css')
     .options({
         processCssUrls: false,
 

@@ -8,7 +8,14 @@
         <h2>{{ review.title }}</h2>
         <div class="rating">{{ reviewMacros.rating(__SELF__.ratingDisplay, review.rating) }}</div>
         <blockquote>{{ review.content | nl2br }}</blockquote>
-        <figcaption>{{ review.name }}</figcaption>
+        <figcaption>
+            {% if review.avatar %}
+                <div class="review--avatar">
+                    <img src="{{ review.avatar | resize(120) }}" alt="{{ review.avatar.title }}" class="w-full h-full   object-cover" />
+                </div>
+            {% endif %}
+            <div>{{ review.name }}</div>
+        </figcaption>
     </figure>
     {% else %}
         <p>{{ __SELF__.noReviewsMessage }}</p>
