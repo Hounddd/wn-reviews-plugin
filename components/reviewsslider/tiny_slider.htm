@@ -4,6 +4,12 @@
     {% set uuid = __SELF__.id %}
 
     <div class="reviews--slider">
+        {% if __SELF__.showCounter %}
+        <!-- Slider counter -->
+        <div id="{{ uuid }}Counter" class="reviews--slider--counter">
+            <span class="index">1</span>/<span>{{ reviews | length }}</span>
+        </div>
+        {% endif %}
         <div id="{{ uuid }}">
             {% for review in reviews %}
                 <figure class="review">
@@ -24,17 +30,24 @@
 
     <script>
     window.addEventListener('DOMContentLoaded', function() {
+
         var slider = tns({
             container: '#{{ uuid }}',
             rewind: true,
             slideBy: 'page',
 
+            {% if __SELF__.showControls %}
             controlsText: ["{{ 'system::lang.pagination.previous' | trans }}", "{{ 'system::lang.pagination.next' | trans }}"],
             controlsPosition: 'top',
+            {% else %}
+            controls: false,
+            {% endif %}
 
             {% if __SELF__.showDots %}
             nav: true,
             navPosition: 'bottom',
+            {% else %}
+            nav: false,
             {% endif %}
 
             {% if __SELF__.autoPlay > 0 %}
@@ -43,14 +56,17 @@
                 autoplayButtonOutput: false,
             {% endif %}
         });
+
+        {% if __SELF__.showCounter %}
+        var counterEl = document.getElementById('{{ uuid }}Counter');
+        var counterIndexEl = counterEl.querySelector('.index');
+
+        slider.events.on("transitionEnd", data => {
+            counterIndexEl.innerText = data.displayIndex;
+        });
+        {% endif %}
     });
     </script>
-
-    <style>
-
-
-    </style>
-
 {% else %}
     <p>{{ __SELF__.noReviewsMessage }}</p>
 {% endif %}

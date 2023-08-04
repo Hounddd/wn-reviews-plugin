@@ -4,8 +4,9 @@
 
 .reviews{
     &--slider {
+        @apply relative;
 
-        .tns{
+        .tns {
             &-outer {
                 @apply relative;
             }
@@ -68,6 +69,12 @@
                     @apply bg-gray-600;
                 }
             }
+
+        }
+
+        // Counter
+        &--counter {
+            @apply absolute right-5 top-5 z-10 rounded-full bg-gray-600 px-2 text-center text-sm text-white;
         }
 
     }
