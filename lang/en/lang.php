@@ -24,6 +24,7 @@ return [
             'label' => 'Review',
             'label_plural' => 'Reviews',
             'approved' => 'Approved',
+            'approved_comment' => 'only approved reviews are publicly visible',
             'avatar' => 'Avatar',
             'content' => 'Content',
             'email' => 'Email',

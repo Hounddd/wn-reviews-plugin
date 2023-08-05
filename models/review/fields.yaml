@@ -42,18 +42,20 @@ secondaryTabs:
     fields:
         avatar:
             label: 'hounddd.reviews::lang.models.review.avatar'
-            span: left
+            span: full
             type: fileupload
             mode: image
             imageHeight: 260
             imageWidth: 260
             thumbOptions:
                 mode: crop
-                quality: 90
+                quality: 90 
                 sharpen: 0
-                interlace: false
+                interlace: false    
                 extension: auto
         approved:
             label: 'hounddd.reviews::lang.models.review.approved'
-            span: left
+            comment: 'hounddd.reviews::lang.models.review.approved_comment'
+            span: full
+            cssClass: 'm-t-md'
             type: switch

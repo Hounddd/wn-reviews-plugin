@@ -24,6 +24,7 @@ return [
             'label' => 'Avis',
             'label_plural' => 'Avis',
             'approved' => 'Approuvé',
+            'approved_comment' => 'seuls les avis approuvés sont visibles publiquement',
             'avatar' => 'Avatar',
             'content' => 'Contenu',
             'email' => 'Email',
