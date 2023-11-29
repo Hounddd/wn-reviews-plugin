@@ -1,0 +1,37 @@
+{#
+ # Warning, when using LengthAwarePaginator render method, some string remain untranslated
+ # if the pagination strings aren't defined in the site
+ #
+    {{ dump(reviews) }}
+    {{ reviews.render | raw }}
+#}
+
+{% if reviews.lastPage > 1 %}
+    <nav>
+        <ul class="pagination list-unstyled">
+            {% if reviews.currentPage > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (reviews.currentPage-1) }) }}" aria-label="{{ 'system::lang.pagination.previous' | trans }}">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">{{ 'system::lang.pagination.previous' | trans }}</span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% for page in 1..reviews.lastPage %}
+                <li class="page-item {{ reviews.currentPage == page ? 'active' : null }}">
+                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                </li>
+            {% endfor %}
+
+            {% if reviews.lastPage > reviews.currentPage %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (reviews.currentPage+1) }) }}" aria-label="{{ 'system::lang.pagination.next' | trans }}">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">{{ 'system::lang.pagination.next' | trans }}</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endif %}
