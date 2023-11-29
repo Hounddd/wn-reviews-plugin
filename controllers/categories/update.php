@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('hounddd/reviews/categories') ?>">Categories</a></li>
+        <li><a href="<?= Backend::url('hounddd/reviews/categories') ?>"><?= e(trans('hounddd.reviews::lang.models.category.label_plural')); ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
