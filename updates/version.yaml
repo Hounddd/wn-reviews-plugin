@@ -3,3 +3,7 @@
     - v1.0.0/create_reviews_table.php
     - v1.0.0/create_categories_table.php
     - v1.0.0/seed_all_tables.php
+'1.0.1':
+    - 'Add review date and sorting order'
+    - v1.0.1/reviews_add_review_date_field.php
+    - v1.0.1/reviews_add_sort_order_field.php

@@ -1,0 +1,17 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: 'hounddd.reviews::lang.controllers.reorder_reviews'
+
+# Attribute name
+nameFrom: name
+
+# Model Class name
+modelClass: Hounddd\Reviews\Models\Review
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar

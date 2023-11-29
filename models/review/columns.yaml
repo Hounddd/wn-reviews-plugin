@@ -3,16 +3,28 @@
 # ===================================
 
 columns:
+    sort_order:
+        label: 'hounddd.reviews::lang.models.general.sort_order'
+        type: number
+        searchable: false
+        sortable: true
+        invisible: true
     name:
         label: 'hounddd.reviews::lang.models.general.name'
         type: text
         searchable: true
+        sortable: true
+    date:
+        label: 'hounddd.reviews::lang.models.general.date'
+        type: date
+        searchable: false
         sortable: true
     email:
         label: 'hounddd.reviews::lang.models.review.email'
         type: text
         searchable: true
         sortable: true
+        invisible: true
     rating:
         label: 'hounddd.reviews::lang.models.review.rating'
         sortable: true

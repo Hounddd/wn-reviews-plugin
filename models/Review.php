@@ -12,6 +12,7 @@ class Review extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
     use \Winter\Storm\Database\Traits\SoftDelete;
+    use \Winter\Storm\Database\Traits\Sortable;
 
     public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
 

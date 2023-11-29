@@ -26,6 +26,13 @@ tabs:
             maxStars: 5
             color: orange
             default: 0
+        date:
+            tab: 'hounddd.reviews::lang.tabs.general'
+            label: 'hounddd.reviews::lang.models.general.date'
+            span: left
+            type: datepicker
+            mode: date
+            ignoreTimezone: true
         content:
             tab: 'hounddd.reviews::lang.tabs.general'
             label: 'hounddd.reviews::lang.models.review.content'
@@ -49,9 +56,9 @@ secondaryTabs:
             imageWidth: 260
             thumbOptions:
                 mode: crop
-                quality: 90 
+                quality: 90
                 sharpen: 0
-                interlace: false    
+                interlace: false
                 extension: auto
         approved:
             label: 'hounddd.reviews::lang.models.review.approved'

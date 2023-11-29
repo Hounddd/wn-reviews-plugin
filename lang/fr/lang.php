@@ -15,6 +15,7 @@ return [
             'created_at' => 'Créé le',
             'updated_at' => 'Mis à jour le',
             'deleted_at' => 'Supprimé le',
+            'date' => 'Date',
             'enabled' => 'Activé',
             'name' => 'Nom',
             'slug' => 'Slug',
@@ -36,6 +37,12 @@ return [
             'description' => 'Description',
             'sort_order' => 'Ordre de tri',
         ],
+    ],
+    'controllers' => [
+        'reorder_categories' => 'Réorganiser les catégories',
+        'return_to_categories' => 'Retour aux catégories',
+        'reorder_reviews' => 'Réorganiser les avis',
+        'return_to_reviews' => 'Retour aux avis',
     ],
     'components' => [
         'general' => [
@@ -89,13 +96,17 @@ return [
     'sorting' => [
         'title_asc' => 'Titre (ascendant)',
         'title_desc' => 'Titre (descendant)',
+        'date_asc' => 'Date (ascendant)',
+        'date_desc' => 'Date (descendant)',
+        'rating_asc' => 'Note (ascendant)',
+        'rating_desc' => 'Note (descendant)',
+        'sort_order_asc' => 'Tri (ascendant)',
+        'sort_order_desc' => 'Tri (descendant)',
+        'random' => 'Aléatoire',
         'created_asc' => 'Création le (ascendant)',
         'created_desc' => 'Création (descendant)',
         'updated_asc' => 'Mise à jour (ascendant)',
         'updated_desc' => 'Mise à jour (descendant)',
-        'rating_asc' => 'Note (ascendant)',
-        'rating_desc' => 'Note (descendant)',
-        'random' => 'Aléatoire',
     ],
     'seeds' => [
         'general' => 'Générale',

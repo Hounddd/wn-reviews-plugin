@@ -14,6 +14,7 @@ class Reviews extends Controller
     public $implement = [
         \Backend\Behaviors\FormController::class,
         \Backend\Behaviors\ListController::class,
+        \Backend\Behaviors\ReorderController::class,
     ];
 
     public $requiredPermissions = ['hounddd.reviews.manage_reviews'];
@@ -23,7 +24,10 @@ class Reviews extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Hounddd.Reviews', 'reviews', 'reviews');
+    }
 
-        $this->bodyClass = 'compact-container';
+    public function reorderExtendQuery($query)
+    {
+        $query->isApproved();
     }
 }

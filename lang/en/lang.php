@@ -15,6 +15,7 @@ return [
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'deleted_at' => 'Deleted At',
+            'date' => 'Date',
             'enabled' => 'Enabled',
             'name' => 'Name',
             'slug' => 'Slug',
@@ -36,6 +37,12 @@ return [
             'description' => 'Description',
             'sort_order' => 'Sort order',
         ],
+    ],
+    'controllers' => [
+        'reorder_categories' => 'Reorder categories',
+        'return_to_categories' => 'Return to categories',
+        'reorder_reviews' => 'Reorder reviews',
+        'return_to_reviews' => 'Return to reviews',
     ],
     'components' => [
         'general' => [
@@ -89,13 +96,17 @@ return [
     'sorting' => [
         'title_asc' => 'Title (ascending)',
         'title_desc' => 'Title (descending)',
+        'date_asc' => 'Date (ascending)',
+        'date_desc' => 'Date (descending)',
+        'rating_asc' => 'Rating (ascending)',
+        'rating_desc' => 'Rating (descending)',
+        'sort_order_asc' => 'Sort order (ascending)',
+        'sort_order_desc' => 'Sort order (descending)',
+        'random' => 'Random',
         'created_asc' => 'Created (ascending)',
         'created_desc' => 'Created (descending)',
         'updated_asc' => 'Updated (ascending)',
         'updated_desc' => 'Updated (descending)',
-        'rating_asc' => 'Rating (ascending)',
-        'rating_desc' => 'Rating (descending)',
-        'random' => 'Random'
     ],
     'seeds' => [
         'general' => 'General',

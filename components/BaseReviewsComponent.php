@@ -18,13 +18,17 @@ abstract class BaseReviewsComponent extends ComponentBase
     public static $allowedSortingOptions = [
         'title asc'       => 'hounddd.reviews::lang.sorting.title_asc',
         'title desc'      => 'hounddd.reviews::lang.sorting.title_desc',
+        'rating asc'      => 'hounddd.reviews::lang.sorting.rating_asc',
+        'rating desc'     => 'hounddd.reviews::lang.sorting.rating_desc',
+        'date asc'        => 'hounddd.reviews::lang.sorting.date_asc',
+        'date desc'       => 'hounddd.reviews::lang.sorting.date_desc',
+        'sort_order asc'  => 'hounddd.reviews::lang.sorting.sort_order_asc',
+        'sort_order desc' => 'hounddd.reviews::lang.sorting.sort_order_desc',
+        'random'          => 'hounddd.reviews::lang.sorting.random',
         'created_at asc'  => 'hounddd.reviews::lang.sorting.created_asc',
         'created_at desc' => 'hounddd.reviews::lang.sorting.created_desc',
         'updated_at asc'  => 'hounddd.reviews::lang.sorting.updated_asc',
         'updated_at desc' => 'hounddd.reviews::lang.sorting.updated_desc',
-        'rating asc'      => 'hounddd.reviews::lang.sorting.rating_asc',
-        'rating desc'     => 'hounddd.reviews::lang.sorting.rating_desc',
-        'random'          => 'hounddd.reviews::lang.sorting.random',
     ];
 
     /**

@@ -18,4 +18,8 @@
         data-stripe-load-indicator>
         <?= e(trans('backend::lang.list.delete_selected')); ?>
     </button>
+
+    <a href="<?= Backend::url('hounddd/reviews/reviews/reorder') ?>" class="btn btn-default wn-icon-sort">
+        <?= e(trans('hounddd.reviews::lang.controllers.reorder_reviews')) ?>
+    </a>
 </div>
