@@ -31,7 +31,7 @@
                 <figure class="review absolute top-0 text-center px-6" x-show="currentIndex == {{ loop.index }}" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
                     {% if review.avatar %}
                         <div class="w-24 h-24 rounded-full border-4 border-gray-400 overflow-hidden mx-auto" x-show="currentIndex == {{ loop.index }}" x-transition:enter="transition transform duration-300" x-transition:enter-start="translate-y-6" x-transition:enter-end="translate-y-0" x-transition:leave="transition transform duration-300" x-transition:leave-start="translate-y-0" x-transition:leave-end="-translate-y-12" >
-                            <img src="{{ review.avatar | resize(120) }}" alt="{{ review.avatar.title }}" class="w-full h-full object-cover" />
+                            <img src="{{ review.avatar | resize(120, auto, {'extension':'webp'}) }}" alt="{{ review.avatar.title }}" class="w-full h-full object-cover" />
                         </div>
                     {% endif %}
                     <p class="review--name mb-4">{{ review.name }}</p>
