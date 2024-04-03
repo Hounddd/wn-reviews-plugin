@@ -23,6 +23,8 @@ class Reviews extends Controller
     {
         parent::__construct();
 
+        $this->bodyClass = 'compact-container';
+
         BackendMenu::setContext('Hounddd.Reviews', 'reviews', 'reviews');
     }
 

@@ -8,6 +8,11 @@ use Winter\Storm\Database\Collection;
 class ReviewsSlider extends BaseReviewsComponent
 {
     /**
+     * Max reviews to display
+     */
+    public ?int $maxReviews;
+
+    /**
      * Type of slider to use
      */
     public ?string $sliderType;
@@ -72,6 +77,13 @@ class ReviewsSlider extends BaseReviewsComponent
             ],
             parent::getDefaultProperties(),
             [
+                'maxReviews' => [
+                    'title'             => 'hounddd.reviews::lang.components.reviews_slider.max_reviews',
+                    'type'              => 'string',
+                    'validationPattern' => '^[0-9]+$',
+                    'default'           => 0,
+                    'group'             => 'hounddd.reviews::lang.components.general.group_display',
+                ],
                 'showDots' => [
                     'title'   => 'hounddd.reviews::lang.components.reviews_slider.show_dots',
                     'type'    => 'checkbox',
@@ -143,6 +155,7 @@ class ReviewsSlider extends BaseReviewsComponent
 
     protected function prepareVars()
     {
+        $this->maxReviews   = $this->page['maxReviews']   = $this->property('maxReviews');
         $this->sliderType   = $this->page['sliderType']   = $this->property('sliderType');
         $this->showControls = $this->page['showControls'] = $this->property('showControls');
         $this->showCounter  = $this->page['showCounter']  = $this->property('showCounter');
@@ -167,9 +180,14 @@ class ReviewsSlider extends BaseReviewsComponent
 
         $reviews = Review::with(['categories', 'avatar'])->listFrontEnd([
             'sort'         => $this->property('sortOrder'),
+            'featuredFirst' => $this->property('featuredFirst'),
             'category'     => $category,
             'approved'     => $isApproved,
         ])->get();
+
+        if ($this->maxReviews > 0) {
+            $reviews = $reviews->take($this->maxReviews);
+        }
 
         return $reviews;
     }

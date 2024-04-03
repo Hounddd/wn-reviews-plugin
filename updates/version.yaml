@@ -9,3 +9,8 @@
     - v1.0.1/reviews_add_sort_order_field.php
 '1.0.2':
     - 'Use webp as default image format'
+'1.0.3':
+    - 'Add featured reviews'
+    - 'Add properties "featured first" to reviews components'
+    - 'Add properties "max reviews" to reviews slider component'
+    - v1.0.3/reviews_add_featured_field.php

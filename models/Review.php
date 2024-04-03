@@ -148,12 +148,20 @@ class Review extends Model
          */
         extract(array_merge([
             'sort'             => 'created_desc',
+            'featuredFirst'    => false,
             'category'         => null,
             'approved'         => true
         ], $options));
 
         if ($approved) {
             $query->isApproved();
+        }
+
+        /*
+         * Featuring
+         */
+        if ($featuredFirst) {
+            $query->orderBy('featured', 'desc');
         }
 
         /*

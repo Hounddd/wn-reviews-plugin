@@ -80,9 +80,10 @@ class Reviews extends BaseReviewsComponent
         $isApproved = !$this->checkEditor();
 
         $reviews = Review::with(['categories', 'avatar'])->listFrontEnd([
-            'sort'         => $this->property('sortOrder'),
-            'category'     => $category,
-            'approved'     => $isApproved,
+            'sort'          => $this->property('sortOrder'),
+            'featuredFirst' => $this->property('featuredFirst'),
+            'category'      => $category,
+            'approved'      => $isApproved,
         ])->paginate($this->property('reviewsPerPage'), $this->property('pageNumber'));
 
         return $reviews;

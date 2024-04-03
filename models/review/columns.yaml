@@ -29,6 +29,10 @@ columns:
         label: 'hounddd.reviews::lang.models.review.rating'
         sortable: true
         type: starrating
+    featured:
+        label: 'hounddd.reviews::lang.models.review.featured'
+        sortable: true
+        type: switch
     title:
         label: 'hounddd.reviews::lang.models.general.title'
         type: text

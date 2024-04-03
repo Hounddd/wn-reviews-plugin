@@ -63,6 +63,11 @@ abstract class BaseReviewsComponent extends ComponentBase
     public ?string $ratingDisplay;
 
     /**
+     * Display featured reviews first
+     */
+    public ?bool $featuredFirst;
+
+    /**
      * Returns the properties provided by the component
      */
     public function getDefaultProperties(): array
@@ -86,6 +91,12 @@ abstract class BaseReviewsComponent extends ComponentBase
                 'description' => 'hounddd.reviews::lang.components.general.order_description',
                 'type'        => 'dropdown',
                 'default'     => 'created_at desc',
+            ],
+            'featuredFirst' => [
+                'title'       => 'hounddd.reviews::lang.components.general.featured_first',
+                'description' => 'hounddd.reviews::lang.components.general.featured_first_description',
+                'type'        => 'checkbox',
+                'default'     => 0,
             ],
             'ratingDisplay' => [
                 'title'   => 'hounddd.reviews::lang.components.general.rating_display',
@@ -123,6 +134,7 @@ abstract class BaseReviewsComponent extends ComponentBase
         $this->prepareVars();
 
         $this->ratingDisplay = $this->page['ratingDisplay'] = $this->property('ratingDisplay');
+        $this->featuredFirst = $this->page['featuredFirst'] = $this->property('featuredFirst');
 
         $this->category = $this->page['category'] = $this->loadCategory();
         $this->reviews = $this->page['reviews'] = $this->listReviews();

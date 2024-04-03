@@ -29,6 +29,7 @@ return [
             'avatar' => 'Avatar',
             'content' => 'Contenu',
             'email' => 'Email',
+            'featured' => 'En vedette',
             'rating' => 'Note',
         ],
         'category' => [
@@ -48,6 +49,8 @@ return [
         'general' => [
             'category_filter' => 'Filtre des catégories',
             'category_filter_description' => 'Entrez une adresse de catégorie ou un paramètre d’URL pour filter les avis. Laissez vide pour afficher tous les avis.',
+            'featured_first' => 'En vedette en premier',
+            'featured_first_description' => 'afficher en premier les avis en vedette',
             'group_display' => 'Affichage',
             'no_reviews' => 'Message en l’absence d’avis',
             'no_reviews_description' => 'Message à afficher dans la liste d’avis lorsqu’il n’y a aucun avis. Cette propriété est utilisée par le partial par défaut du composant.',
@@ -79,6 +82,7 @@ return [
             'auto_play_description' => 'Permet de passer à l’avis suivante après X secondes. Si la valeur est 0, la lecture automatique est désactivée.',
             'auto_play_validation' => 'Format non valide pour la valeur du délai de lecture automatique',
             'loadScripts' => 'Charger les scripts requis',
+            'max_reviews' => 'Nombre max d’avis',
             'silder_type' => 'Type de slider',
             'show_control' => 'Afficher les boutons de contrôle',
             'show_counter' => 'Afficher le compteur d’avis',

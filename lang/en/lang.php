@@ -29,6 +29,7 @@ return [
             'avatar' => 'Avatar',
             'content' => 'Content',
             'email' => 'Email',
+            'featured' => 'Featured',
             'rating' => 'Rating',
         ],
         'category' => [
@@ -48,6 +49,8 @@ return [
         'general' => [
             'category_filter' => 'Category filter',
             'category_filter_description' => 'Enter a category slug or URL parameter to filter the reviews by. Leave empty to show all reviews.',
+            'featured_first' => 'Featured first',
+            'featured_first_description' => 'display featured reviews first',
             'group_display' => 'Display',
             'no_reviews' => 'No reviews message',
             'no_reviews_description' => 'Message to display in the review list in case if there are no reviews. This property is used by the default component partial.',
@@ -79,6 +82,7 @@ return [
             'auto_play_description' => 'Slide to next reviews after X seconds. If set to 0, auto play will be disable.',
             'auto_play_validation' => 'Invalid format of the auto play delay value',
             'loadScripts' => 'Load requested scripts',
+            'max_reviews' => 'Max reviews',
             'slider_type' => 'Slider type',
             'show_controls' => 'Show slider control buttons',
             'show_counter' => 'Show slider counter',
