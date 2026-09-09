@@ -11,7 +11,7 @@
         <figcaption>
             {% if review.avatar %}
                 <div class="review--avatar">
-                    <img src="{{ review.avatar | resize(120, auto, {'extension':'webp'}) }}" alt="{{ review.avatar.title ?: review.name }}" class="w-full h-full   object-cover" />
+                    <img src="{{ review.avatar | resize(120, auto, {'extension':'webp'}) }}" alt="{{ review.avatar.title ?: review.name }}" class="w-full h-full object-cover" />
                 </div>
             {% endif %}
             <div>{{ review.name }}</div>
